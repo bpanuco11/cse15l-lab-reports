@@ -4,6 +4,7 @@ LAB 1
 <br>
 CD # 1: 
 cd by itself does not change the directory path since the path is already situated at the root directory. Only way it could make a change is if I had the directory path set to a different directory other than the root directory. For example, directory path changes from lecture1/messages to the root by inputting cd with no arguments.<br>
+
 ![Image](lab1_cd1.png)
 
 
