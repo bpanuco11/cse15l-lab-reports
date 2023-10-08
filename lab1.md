@@ -1,3 +1,4 @@
+Brandon Panuco
 LAB 1
 
 
@@ -12,3 +13,27 @@ cd with an argument changes the directory path to the specified folder from the 
 CD # 3:
 cd with a file, in this case a txt file, as an argument produces an error. The reason why it produces an error is simply because of the purpose of the command cd, which is to change path directories and not to change the path into a file.
 ![Image](lab1_cd3.png)
+
+LS # 1:
+ls by itself will list the files and folders in the current path. In this case ls by itself in the root directory list the only folder available, lecture1.
+![Image](lab1_ls1.png)
+
+LS # 2:
+ls with a directory path as an argument will list the contents found inside the provided path. In this case I wanted to know the contents of messages folder, so ls listed the files found inside messages, which were all txt files. 
+![Image](lab1_ls2.png)
+
+LS # 3:
+ls with a file as an argument will basically provide me with the file's path. This is not an error since files can only store the file itself and not numerous files like directories are able to hold. Hence, when asking to list the directory of a file you are provided the file's path instead.
+![Image](lab1_ls3.png)
+
+CAT # 1:
+Providing the terminal with the cat command with no argument seems to result in an infinite loop where the terminal wait for keyboard input until a termination is requested. If I typed anything on the terminal it would have been returned back into the terminal as output. I terminated the loop by pressing ctr + c on keyboard.
+![Image](lab1_cat1.png)
+
+CAT # 2:
+When using a directory as an argument,in this case messages directory, on the cat command I was presented with the message letting me know that the given directory path is a directory. I feel like this is an error in which the terminal lets its user know that the user provided a non file path. This makes sense since cat is suppose to work for files only. 
+![Image](lab1_cat2.png)
+
+CAT # 3:
+Using cat with a file path as its argument displays the contents found inside that specific file. In this case I chose to access the zh-cn.txt file, which displayed everything that was typed inside that file. 
+![Image](lab1_cat3.png)
