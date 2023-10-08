@@ -1,5 +1,6 @@
 LAB 1
 
+
 CD # 1
 ![Image](lab1_cd1.png)
 
