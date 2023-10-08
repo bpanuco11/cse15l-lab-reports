@@ -8,11 +8,10 @@ cd by itself does not change the directory path since the path is already situat
 CD # 2:
 
 
-![Image](lab1_cd2.png)
 cd with an argument changes the directory path to the specified folder from the last part of the path argument. In this case I specified a path change from the root directory to the lecture1 directory. If I had specified: cd lecture1/messages, then the last part of the path argument, in this case messages, would be the new path directory.
+![Image](lab1_cd2.png)
 
 CD # 3:
 
+cd with a file, in this case a txt file, as an argument produces an error. The reason why it produces an error is simply because of the purpose of the command cd, which is to change path directories and not to change the path into a file.
 ![Image](lab1_cd3.png)
-
-cd with a file as an argument produces an error. The reason why it produces an error is simply because of the purpose of the command cd, which is to change path directories and not to change the path into a file.
