@@ -23,7 +23,7 @@ Before running the command, the working directory is /home. ls by itself will li
 
 
 LS # 2:
-Before running the command, the working directory is /home. ls with a directory path as an argument will list the contents found inside the provided path. In this case I wanted to know the contents of messages folder, so ls listed the files found inside messages, which were all txt files. So, our working directory is /home/lecture1/messages after I cd into /messages path. No errors were produced by the output since /messages is a valid path.  <br>
+Before running the command, the working directory is /home. ls with a directory path as an argument will list the contents found inside the provided path. In this case I wanted to know the contents of messages folder, so ls listed the files found inside messages, which were all txt files. So, our working directory is /home since ls has no influence on our working path or requires to chande directories. No errors were produced by the output since /messages is a valid path.  <br>
 ![Image](lab1_ls2.png)
 
 
