@@ -13,7 +13,7 @@ Before running the command, the working directory is /home. cd with an argument 
 ![Image](lab1_cd2.png)
 
 CD # 3:
-Before running the command, the working directory is /home. cd with a file, in this case a txt file, as an argument produces an error. The reason why it produces an error is simply because of the purpose of the command cd, which is to change path directories and not to change the path into a file. /home remains as the working directory due to the error. <br>
+Before running the command, the working directory is /home/lecture1. cd with a file, in this case a txt file, as an argument produces an error. The reason why it produces an error is simply because of the purpose of the command cd, which is to change path directories and not to change the path into a file. /home/lecture1 remains as the working directory due to the error. <br>
 ![Image](lab1_cd3.png)
 
 
