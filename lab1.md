@@ -9,7 +9,7 @@ Before running the command, the working directory is /home. cd by itself does no
 
 
 CD # 2:
-Before running the command, the working directory is /home. cd with an argument changes the directory path to the specified folder from the last part of the path argument. In this case I specified a path change from the home directory to the lecture1 directory. If I had specified: cd /home/lecture1/messages, then the last part of the path argument, in this case messages, would be the new path directory. So, Working directory after running the command is /home/lecture1/messages. The output produces no errors.<br>
+Before running the command, the working directory is /home. cd with an argument changes the directory path to the specified folder from the last part of the path argument. In this case I specified a path change from the home directory to the lecture1 directory. If I had specified: cd /home/lecture1/messages, then the last part of the path argument, in this case messages, would be the new path directory. So, Working directory after running the command is /home/lecture1. The output produces no errors.<br>
 ![Image](lab1_cd2.png)
 
 CD # 3:
