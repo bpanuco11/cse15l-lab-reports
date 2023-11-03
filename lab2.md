@@ -32,8 +32,8 @@ handleRequest receives.
 ![Image](howAreYouMessage.png)<br>
 
 Part 2<br>
-![Image](id_rsa_local.png)<br>
 ![Image](id_rsa.pub_local.png)<br>
+![Image](id_rsa_local.png)<br>
 ![Image](sshNoPassword.png)<br>
 
 Part 3 <br>
