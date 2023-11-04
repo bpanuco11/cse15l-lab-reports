@@ -155,7 +155,8 @@ public class ListTests {
 }
 ```
 <br>Part 2<br><br>
-
+citation: <a href="https://www.redhat.com/sysadmin/linux-find-command">https://www.redhat.com/sysadmin/linux-find-command</a>
+<br><br>
 find -type d<br>
 <br> The -type d option allows users to display only the directories of the provided path.<br><br>
 ``` $ find technical/ -type d ```
