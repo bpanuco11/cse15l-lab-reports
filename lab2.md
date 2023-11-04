@@ -32,6 +32,7 @@ handleRequest receives.
 ![Image](howAreYouMessage.png)<br>
 
 Part 2<br>
+For this part of the lab, I received help in office hours and was told this was the correct way to copy my public key into my remote system.
 ![Image](id_rsa_local.png)<br>
 ![Image](id_rsa.pub_local.png)<br>
 ![Image](sshNoPassword.png)<br>
