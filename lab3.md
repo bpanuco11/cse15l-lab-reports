@@ -197,4 +197,3 @@ find -empty<br>
 <br>If the users decides to add the -type option, then the command will locate and find all empty items in relation to that type. In this case I chose empty files, which may be useful if it is important to keep folders empty.<br>
 ![Image](empty2-command.png)<br>
 
-
