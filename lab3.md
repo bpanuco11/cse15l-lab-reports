@@ -155,3 +155,46 @@ public class ListTests {
 }
 ```
 <br>Part 2<br><br>
+
+find -type d<br>
+<br> The -type d option allows users to display only the directories of the provided path.<br><br>
+``` $ find technical/ -type d ```
+<br>Here I chose to display all directories found inside the technical/ path. This is useful because if a user is only interested in a specific set of files, displaying all
+file path locations is problematic since it makes the search process tedious.<br>
+![Image](type-d-find-command.png)<br>
+``` $ find technical/government -type d ``` 
+<br>Here I chose to display all directories inside the government folder that is found inside the technical path. This is helpful once a user has found a specific folder
+they want to investigate, so they can search even more deep. In this case, a user may be interested in a specific goverment file, so this command directly accesses all 
+folder contents of government.<br>
+![Image](type-d-find-command2.png)<br><br>
+
+find -maxdepth<br>
+<br> The -maxdepth option filters the amount searches for the path provided.<br>
+```find technical/ -maxdepth 1```
+<br> For this case, it has a similar functionallity to the -type d option in the way that it will display a maximum of only 1 file or directory. This is useful in case a user wants to find out how many different directories and files are there for the specific path without going deeper than 1 file/directory.<br>
+![Image](maxdepth-command.png)<br>
+```find technical/ -maxdepth 1 -type d```
+<br> In this case, adding the type d option allows to diplay all directories within a specific depth search. For instance, this example shows how many directories there are
+in the technical folder without going deeper than 1. This will help users navigate way quickly as it eliminates directory replicas such as when only using -type d by itself.<br>
+![Image](maxdepth2-command.png)<br><br>
+
+find -iname <br>
+<br>This option allows to search our directory at the specific path with specific keyword case-insensitive.<br>
+```find technical/ -iname "bio*"```
+<br> Useful since whenever a user has an idea of what folder or file to search, if that path starts exatly with a given keyword, in this case "bio", the user can use this command with string "bio*" as argument. The search resulted in the biomed path. <br>
+![Image](iname-command.png)<br>
+```find technical/ -iname "*bio*"```
+<br> If the user wants to find a file or directory with a keyword in mind, they can use the provided command with string argument "*<string>*" in case the file/directory does not start or end with that specific keyword. It is useful as it will display desired text files and eliminate useless options in relation to the user's search.<br>
+![Image](iname2-command.png)<br><br>
+
+find -empty<br>
+<br> locates and finds all empty files/directories.<br>
+
+```find technical/ -empty```
+<br> This specific empty command allows for searches on files and directories that are empty. It is helpful when there is way too many files and directories, and users want to trash the empty ones without having to search manually. <br>
+![Image](empty-command.png)<br>
+```find technical/ -empty -type f```
+<br>If the users decides to add the -type option, then the command will locate and find all empty items in relation to that type. In this case I chose empty files, which may be useful if it is important to keep folders empty.<br>
+![Image](empty2-command.png)<br>
+
+
