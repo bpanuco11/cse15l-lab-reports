@@ -169,7 +169,7 @@ folder contents of government.<br>
 ![Image](type-d-find-command2.png)<br><br>
 
 find -maxdepth<br>
-<br> The -maxdepth option filters the amount searches for the path provided.<br>
+<br> The -maxdepth option filters the amount searches for the path provided.<br><br>
 ```find technical/ -maxdepth 1```
 <br> For this case, it has a similar functionallity to the -type d option in the way that it will display a maximum of only 1 file or directory. This is useful in case a user wants to find out how many different directories and files are there for the specific path without going deeper than 1 file/directory.<br>
 ![Image](maxdepth-command.png)<br>
@@ -179,7 +179,7 @@ in the technical folder without going deeper than 1. This will help users naviga
 ![Image](maxdepth2-command.png)<br><br>
 
 find -iname <br>
-<br>This option allows to search our directory at the specific path with specific keyword case-insensitive.<br>
+<br>This option allows to search our directory at the specific path with specific keyword case-insensitive.<br><br>
 ```find technical/ -iname "bio*"```
 <br> Useful since whenever a user has an idea of what folder or file to search, if that path starts exatly with a given keyword, in this case "bio", the user can use this command with string "bio*" as argument. The search resulted in the biomed path. <br>
 ![Image](iname-command.png)<br>
@@ -188,7 +188,7 @@ find -iname <br>
 ![Image](iname2-command.png)<br><br>
 
 find -empty<br>
-<br> locates and finds all empty files/directories.<br>
+<br> locates and finds all empty files/directories.<br><br>
 
 ```find technical/ -empty```
 <br> This specific empty command allows for searches on files and directories that are empty. It is helpful when there is way too many files and directories, and users want to trash the empty ones without having to search manually. <br>
