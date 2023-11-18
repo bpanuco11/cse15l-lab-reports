@@ -161,11 +161,11 @@ citation: <a href="https://www.redhat.com/sysadmin/linux-find-command">https://w
 <br><br>
 `find -type d`<br>
 <br> The `-type d` option allows users to display only the directories of the provided path.<br><br>
-` $ find technical/ -type d `
+`find technical/ -type d`
 <br>Here I chose to display all directories found inside the `technical/` path. This is useful because if a user is only interested in a specific set of files, displaying all
 file path locations is problematic since it makes the search process tedious.<br>
 ![Image](type-d-find-command.png)<br>
-` $ find technical/government -type d `
+`find technical/government -type d`
 <br>Here I chose to display all directories inside the `government/` folder that is found inside the `technical` path. This is helpful once a user has found a specific folder
 they want to investigate, so they can search even more deep. In this case, a user may be interested in a specific `goverment` file, so this command directly accesses all 
 folder contents of `government`.<br>
