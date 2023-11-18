@@ -1,14 +1,14 @@
 Brandon Panuco<br>
-Lab 3<br>
+Lab 3 correction<br>
 
 Part 1<br><br>
-a) I chose to debug the `filter(List<String> list, StringChecker sc)` method in `ListExamples.java` file. I started by creating a file called `ListTests.java` where I created a `testList()` method. The `testList` method initialized an 
-arrayList named `input1` and another one called `expected`. `input1` arrayList is the object I used to compare to the correct outcome, which I saved inside the `expected` object.
-I then used `assertEquals(expected, ListExamples.filter(input1,new StringChecker(){...})` on both objects. As for the `StringChecker` interface, to begin testing without fixing any code errors, I decided to implement the `checkString(String s)` method inside 
-the second `filter` method argument, so it can be passed into the `filter` method. My `checkString` implemented method says that if a string's length is larger than 1, then it should
-not be included in the new ArrayList. My `input1` object contains 4 Strings: `["aaa","b","ccc","a"]`. According to the rule described for the `filter` method, `["b","a"]` should be the
-new Strings saved into a new ArrayList. Hence, I initialized the `expected` arrayList with  `["b","a"]`.<br>
-Here is the unbugged code for the `ListTests.java` file (`ListExamples.java` remains unchanged):<br>
+a) I chose to debug the ```filter(List<String> list, StringChecker sc)``` method in ```ListExamples.java``` file. I started by creating a file called ```ListTests.java``` where I created a ```testList()``` method. The ```testList``` method initialized an 
+arrayList named ```input1``` and another one called ```expected```. ```input1``` arrayList is the object I used to compare to the correct outcome, which I saved inside the ```expected``` object.
+I then used ```assertEquals(expected, ListExamples.filter(input1,new StringChecker(){...})``` on both objects. As for the ```StringChecker``` interface, to begin testing without fixing any code errors, I decided to implement the `checkString(String s)` method inside 
+the second ```filter``` method argument, so it can be passed into the ```filter``` method. My ```checkString``` implemented method says that if a string's length is larger than 1, then it should
+not be included in the new ArrayList. My ```input1``` object contains 4 Strings: ```["aaa","b","ccc","a"]```. According to the rule described for the ```filter``` method, ```["b","a"]``` should be the
+new Strings saved into a new ArrayList. Hence, I initialized the ```expected``` arrayList with  ```["b","a"]```.<br>
+Here is the unbugged code for the ```ListTests.java``` file (```ListExamples.java``` remains unchanged):<br>
 ```
  public class ListTests {
     @Test 
