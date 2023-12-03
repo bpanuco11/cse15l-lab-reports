@@ -15,9 +15,53 @@ Hi Again. So I tried `jdb` in a `bash script` called `test.sh`, but before that 
 ![Image](lab5_jdb2.png)<br><br>
 4.
 Nice job. Now that you found the `bug` I will guide you into fixing it. <br>
-Code before bug fix:<br>
-![Image](lab5_step4_1.png)<br>
-![Image](lab5_step4.png)<br>
+Code before bug fix (`ManualTest.java`):<br>
+```
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+class IsChar implements StringChecker{
+    @Override
+    public boolean checkString(String s) {
+        if (s.length() == 1)
+            return true;
+        return false;
+    }
+}
+public class ManualTest {
+    public static void main(String[] args) {
+        List <String> input = Arrays.asList(args);
+        List <String> result = ListExamples.filter(input,new IsChar());
+        System.out.println("\nChars in input by order:\n" + 
+        Arrays.toString(result.toArray()));
+    }
+}
+```
+Code before bug fix (`ListExamples.java`):<br>
+```
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+interface StringChecker { boolean checkString(String s); }
+class ListExamples {
+  // Returns a new list that has all the elements of the input list for which
+  // the StringChecker returns true, and not the elements that return false, in
+  // the same order they appeared in the input list;
+  static List<String> filter(List<String> list, StringChecker sc) {
+    List<String> result = new ArrayList<>();
+    String result_string = Arrays.toString(result.toArray());
+    for(String s: list) {
+      if(sc.checkString(s)) {
+        result.add(0, s);
+      }
+    }
+    result_string = Arrays.toString(result.toArray());
+    return result;
+  }
+}
+
+```
+
 Since we want to automatically set up `jdb` and pass all inputs as arguments we start by creating a `bash script` named `test.sh`. The bash script will first compile all java files and in the next line we will run the `jdb` command with `ManualTest` as the `class`, since that is the name of you are using for your class, and finally we will use `$@` to pass all arguments as an array into the script. Make sure the `test.sh` file is located in the same directory as all other used java files, since we are not providing the complete path while compilying and running `jdb`.<br>
 ![Image](lab5_step4_2.png)<br>
 Now I will run a `failure-inducing input` that will provoke the bug to occur: `bash test.sh a b cc c d`. This command line will return the `symptom` `[d,c,b,a]`, which is wrong since we expect `[a,b,c,d]`.<br>
@@ -26,4 +70,7 @@ If I repeat the steps but instead of passing `a b cc c d` as the arguments and i
 ![Image](lab5_step4_4.png)<br>
 Lastly, since we have found the `bug`, which is the line `result.add(0, s);` all we have to do is change it so that instead of adding at `index 0` it adds to the end of the `List`. That means that our bug was originally adding new `elements` at the start, so it pushed old elements to the right one spot, which is not what is wanted. The fixed line of code is: `result.add(s);`. Below I will try running the `bash script` once again with `aa b c dd pp o a` as arguments to see if it correctly displays what we expect: `[b,c,o,a]`.<br>
 ![Image](lab5_step4_5.png)<br>
-Since the output is the same as the expected output, we have successfully fixed the `bug`.
+Since the output is the same as the expected output, we have successfully fixed the `bug`.<br><br>
+
+Part 2. <br><br>
+The first half of the quarter I felt like I was not learning anything useful since command lines by themselves felt like they all were useful only for opening and reading files. After the second half I learned way more useful things especifally the tool `vim`. I feel like `vim` is one of the most important concepts in this course since it allows me to quickly modify files if I have issues accessing the UI or if I am stuck in a terminal such as when loggin into `ssh`. Overall aside from `vim`, I feel like this course taught me useful skills that I wil actually be using in the future. 
