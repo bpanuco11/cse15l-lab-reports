@@ -7,13 +7,13 @@ Part 1<br><br>
 Hello, how are you? I was wondering if you could help me with my Project 1 code since it does not seem to be working as intended. I basically used the `filter` method shown in lecture and implemented the `checkString(String s)` method found in the `StringChecker` interface, so that any input in the terminal returns a `List` of `Char` type in the order they are present in input. For example if the input is `a fg c dd o`, then the output should be `[a,c,o]`. The issue being that although my program correctly collects all `Char` type present, it does not collect them in the order they are present by the input. <br>
 ![Image](lab5_symptom.png)<br>
 Here the `symptom` being that the program prints `[b,a]`, which should be `[a,b]`. The `failure-inducing input` being `a aa b bb`. Maybe the bug is that when I use `Arrays.toString(result.toArray()))` to print in `System.out.println()` it somehow reorders in reverse order before converting into a `String`? Any help is appreciated, thank you.<br><br>
-2. 
+2.<br>
 Hi there. It is important you understand what is happening line by line in your code. Have you considered using `jdb` to try and understand the behavior of your code line by line? Try using in a `bash script`, so you only have to run the `sh` file with your `failure-inducing input` as arguments (`$@`). HINT: I suggest using `Arrays.toString(result.toArray()))` to your favor while usinf `jdb` so you can keep track of what is occuring to your `result` variable specifically inside your `filer` method. Make sure while using `jdb` you use `stop at <Class_Name>:<Line>` and `locals` commands to try and figure out where your bug is and what must be done to fix it.<br><br>
-3. 
+3. <br>
 Hi Again. So I tried `jdb` in a `bash script` called `test.sh`, but before that I made sure to add necessary code: `import java.util.Arrays;` and `result_string = Arrays.toString(result.toArray()));` into the `ListExamples.java` file. I then found exactly where I wanted to set a `breakpoint`, so that I did not exit out of my `filer` method. Based on my results, it seems that the bug is the line of code `result.add(0, s);` since it seems that after the for loop is done executing that line of code, `result_string` contains the `symptom`. That means that the bug is not found after I envoked the `filter` method, but inside it. Below I provide my changes to the `ListExamples.java` file and `jdb` results: <br>
 ![Image](lab5_jdb1.png)<br>
 ![Image](lab5_jdb2.png)<br><br>
-4.
+4.<br>
 Nice job. Now that you found the `bug` I will guide you into fixing it. <br>
 Code before bug fix (`ManualTest.java`):<br>
 ```
