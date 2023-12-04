@@ -16,6 +16,7 @@ Hi Again. So I tried `jdb` in a `bash script` called `test.sh`, but before that 
 4.<br>
 Nice job. Now that you found the `bug` I will guide you into fixing it. <br>
 Code before bug fix (`ManualTest.java`):<br>
+
 ```
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -37,8 +38,11 @@ public class ManualTest {
     }
 }
 ```
-Code before bug fix (`ListExamples.java`):<br>
+
+Code before bug fix (`ListExamples.java`):
+<br>
 ```
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -59,6 +63,7 @@ class ListExamples {
     return result;
   }
 }
+
 
 ```
 
