@@ -32,9 +32,9 @@ handleRequest receives.
 ![Image](howAreYouMessage.png)<br>
 
 Part 2<br>
-For this part of the lab, I received help in office hours and was told this was the correct way to copy my public key into my remote system.
+Onat's Office Hours 12/4: Allowed to resubmit Correction when using ls on public key from within iegn6
 ![Image](id_rsa_local.png)<br>
-![Image](id_rsa.pub_local.png)<br>
+![Image](lab2_id_rsa_remote.png)<br> 
 ![Image](sshNoPassword.png)<br>
 
 Part 3 <br>
