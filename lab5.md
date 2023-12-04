@@ -15,6 +15,34 @@ Hi Again. So I tried `jdb` in a `bash script` called `test.sh`, but before that 
 ![Image](lab5_jdb2.png)<br><br>
 4.<br>
 Nice job. Now that you found the `bug` I will guide you into fixing it. <br>
+
+The file & directory structure needed:<br>
+
+Before Compiling java files:<br>
+
+```
+| - lab5/
+    | - ListExamples.java
+    | - ManualTest.java 
+    | - java-test.sh 
+    | - test.sh
+
+```
+
+After Compiling java files:<br>
+```
+| - lab5/
+    | - IsChar.class
+    | - ListExamples.class
+    | - ListExamples.java
+    | - ManualTest.class
+    | - ManualTest.java 
+    | - StringChecker.class
+    | - java-test.sh 
+    | - test.sh
+
+```
+
 Code before bug fix (`ManualTest.java`):<br>
 
 ```
@@ -66,8 +94,12 @@ class ListExamples {
 
 
 ```
+First I will try my own `failure-inducing-input` as an argument to a bash script that compiles and runs `ManualTest.java`.<br>
+![Image](lab5_correction2.png)<br>
+![Image](lab5_correction1.png)<br>
+This verifies that there indeed is a bug in the code that requires fixing.<br>
 
-Since we want to automatically set up `jdb` and pass all inputs as arguments we start by creating a `bash script` named `test.sh`. The bash script will first compile all java files and in the next line we will run the `jdb` command with `ManualTest` as the `class`, since that is the name of you are using for your class, and finally we will use `$@` to pass all arguments as an array into the script. Make sure the `test.sh` file is located in the same directory as all other used java files, since we are not providing the complete path while compilying and running `jdb`.<br>
+Now, Since we want to automatically set up `jdb` and pass all inputs as arguments we start by creating a `bash script` named `test.sh`. The bash script will first compile all java files and in the next line we will run the `jdb` command with `ManualTest` as the `class`, since that is the name of you are using for your class, and finally we will use `$@` to pass all arguments as an array into the script. Make sure the `test.sh` file is located in the same directory as all other used java files, since we are not providing the complete path while compilying and running `jdb`.<br>
 ![Image](lab5_step4_2.png)<br>
 Now I will run a `failure-inducing input` that will provoke the bug to occur: `bash test.sh a b cc c d`. This command line will return the `symptom` `[d,c,b,a]`, which is wrong since we expect `[a,b,c,d]`.<br>
 ![Image](lab5_step4_3.png)<br>
